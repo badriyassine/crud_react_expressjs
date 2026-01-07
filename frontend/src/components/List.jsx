@@ -62,8 +62,8 @@ const List = ({ students }) => {
           ) : (
             students.map((student) => (
               <tr key={student._id || student.id} className="hover:bg-gray-100">
-                <td className="border border-gray-300 px-4 py-2">{student.name}</td>
-                <td className="border border-gray-300 px-4 py-2">{student.familyName}</td>
+                <td className="border border-gray-300 px-4 py-2">{student.name.toUpperCase()}</td>
+                <td className="border border-gray-300 px-4 py-2">{student.familyName.toUpperCase()}</td>
                 <td className="border border-gray-300 px-4 py-2">{student.regNumber}</td>
                 <td className="border border-gray-300 px-4 py-2">{student.course}</td>
                 <td className="border border-gray-300 px-4 py-2">{student.age}</td>
