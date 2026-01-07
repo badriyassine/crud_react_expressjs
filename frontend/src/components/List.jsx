@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { deleteStudent } from "../redux/slices/studentSlice";
