@@ -64,7 +64,7 @@ const studentSlice = createSlice({
   extraReducers: (builder) => {
     builder
 
-      // FETCH
+      // fetch
       .addCase(fetchStudents.pending, (state) => {
         state.loading = true;
       })
@@ -77,7 +77,7 @@ const studentSlice = createSlice({
         state.error = action.payload;
       })
 
-      // ADD
+      // add
       .addCase(addStudent.pending, (state) => {
         state.loading = true;
         state.error = null;
@@ -91,7 +91,7 @@ const studentSlice = createSlice({
         state.error = action.payload;
       })
 
-      // UPDATE
+      // update
       .addCase(updateStudent.pending, (state) => {
         state.loading = true;
         state.error = null;
@@ -108,7 +108,7 @@ const studentSlice = createSlice({
         state.error = action.payload;
       })
 
-      // DELETE
+      // delete
       .addCase(deleteStudent.pending, (state) => {
         state.loading = true;
         state.error = null;

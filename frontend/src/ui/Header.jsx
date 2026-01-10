@@ -11,7 +11,6 @@ const Header = () => {
           size={24}
           className="cursor-pointer transition-transform duration-700 ease-in-out hover:rotate-[360deg] hover:text-gray-200"
         />
-
         <img
           className="w-10 cursor-pointer"
           src="/src/assets/profile.png"

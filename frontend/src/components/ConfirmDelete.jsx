@@ -1,6 +1,6 @@
 const ConfirmDelete = ({ studentName, onConfirm, onCancel }) => {
   return (
-    // Background overlay
+
     <div className="fixed inset-0 flex items-center justify-center bg-black/50">
       {/* Popup card */}
       <div className="bg-white w-full max-w-md p-6 rounded-xl shadow-2xl">

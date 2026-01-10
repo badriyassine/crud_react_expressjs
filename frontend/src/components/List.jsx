@@ -9,7 +9,7 @@ const List = ({ students }) => {
   const dispatch = useDispatch();
   const [editStudent, setEditStudent] = useState(null);
   const [deleteStudentData, setDeleteStudentData] = useState(null);
-  const [loading, setLoading] = useState(false); 
+  const [loading, setLoading] = useState(false);
 
   const handleEdit = (student) => {
     setEditStudent(student);
@@ -35,38 +35,70 @@ const List = ({ students }) => {
         <thead className="bg-[#009d57] text-white">
           <tr>
             <th className="border border-gray-300 px-4 py-2 text-left">Name</th>
-            <th className="border border-gray-300 px-4 py-2 text-left">Family Name</th>
-            <th className="border border-gray-300 px-4 py-2 text-left">Reg Number</th>
-            <th className="border border-gray-300 px-4 py-2 text-left">Course</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">
+              Family Name
+            </th>
+            <th className="border border-gray-300 px-4 py-2 text-left">
+              Reg Number
+            </th>
+            <th className="border border-gray-300 px-4 py-2 text-left">
+              Course
+            </th>
             <th className="border border-gray-300 px-4 py-2 text-left">Age</th>
-            <th className="border border-gray-300 px-4 py-2 text-left">Birthday</th>
-            <th className="border border-gray-300 px-4 py-2 text-left">Email</th>
-            <th className="border border-gray-300 px-4 py-2 text-left">Gender</th>
-            <th className="border border-gray-300 px-4 py-2 text-center">Edit</th>
-            <th className="border border-gray-300 px-4 py-2 text-center">Delete</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">
+              Birthday
+            </th>
+            <th className="border border-gray-300 px-4 py-2 text-left">
+              Email
+            </th>
+            <th className="border border-gray-300 px-4 py-2 text-left">
+              Gender
+            </th>
+            <th className="border border-gray-300 px-4 py-2 text-center">
+              Edit
+            </th>
+            <th className="border border-gray-300 px-4 py-2 text-center">
+              Delete
+            </th>
           </tr>
         </thead>
         <tbody>
           {loading ? (
             <tr>
-              <td colSpan="10" className="border border-gray-300 px-4 py-2 text-center">
+              <td
+                colSpan="10"
+                className="border border-gray-300 px-4 py-2 text-center"
+              >
                 Loading...
               </td>
             </tr>
           ) : students.length === 0 ? (
             <tr>
-              <td colSpan="10" className="border border-gray-300 px-4 py-2 text-center">
+              <td
+                colSpan="10"
+                className="border border-gray-300 px-4 py-2 text-center"
+              >
                 No students found
               </td>
             </tr>
           ) : (
             students.map((student) => (
               <tr key={student._id || student.id} className="hover:bg-gray-100">
-                <td className="border border-gray-300 px-4 py-2">{student.name.toUpperCase()}</td>
-                <td className="border border-gray-300 px-4 py-2">{student.familyName.toUpperCase()}</td>
-                <td className="border border-gray-300 px-4 py-2">{student.regNumber}</td>
-                <td className="border border-gray-300 px-4 py-2">{student.course}</td>
-                <td className="border border-gray-300 px-4 py-2">{student.age}</td>
+                <td className="border border-gray-300 px-4 py-2">
+                  {student.name.toUpperCase()}
+                </td>
+                <td className="border border-gray-300 px-4 py-2">
+                  {student.familyName.toUpperCase()}
+                </td>
+                <td className="border border-gray-300 px-4 py-2">
+                  {student.regNumber}
+                </td>
+                <td className="border border-gray-300 px-4 py-2">
+                  {student.course}
+                </td>
+                <td className="border border-gray-300 px-4 py-2">
+                  {student.age}
+                </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {(() => {
                     const date = new Date(student.birthday);
@@ -76,7 +108,9 @@ const List = ({ students }) => {
                     return `${mm}-${dd}-${yyyy}`;
                   })()}
                 </td>
-                <td className="border border-gray-300 px-4 py-2">{student.email}</td>
+                <td className="border border-gray-300 px-4 py-2">
+                  {student.email}
+                </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {student.gender === "male" ? "Male" : "Female"}
                 </td>
@@ -118,4 +152,3 @@ const List = ({ students }) => {
 };
 
 export default List;
-

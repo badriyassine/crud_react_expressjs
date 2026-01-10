@@ -19,7 +19,7 @@ const Students = () => {
     dispatch(fetchStudents());
   }, [dispatch]);
 
-  // filter students based on searchTerm and genderFilter
+
   const filteredStudents = students.filter((student) => {
     const matchesSearch =
       student.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
