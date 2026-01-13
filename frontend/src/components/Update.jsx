@@ -15,7 +15,16 @@ export const Update = ({ student, onClose }) => {
     email: student?.email || "",
     course: student?.course || "",
     gender: student?.gender || "",
-  });
+  })
+  const birthdayDate = () => {
+    if (!student?.birthday) return "";
+    const date = new Date(student.birthday);
+    const yyyy = date.getFullYear();
+    const mm = String(date.getMonth() + 1).padStart(2, "0");
+    const dd = String(date.getDate()).padStart(2, "0");
+    return `${yyyy}-${mm}-${dd}`;
+  };
+  
 
   // Validation functions
   const validateName = (value) => /^[a-zA-Z\s]*$/.test(value);
@@ -189,7 +198,7 @@ export const Update = ({ student, onClose }) => {
               <input
                 type="date"
                 name="birthday"
-                value={formData.birthday}
+                value={birthdayDate()}
                 onChange={handleChange}
                 className={`border p-2 rounded-md ${
                   fieldErrors.birthday ? "border-red-500" : "border-green-500"
