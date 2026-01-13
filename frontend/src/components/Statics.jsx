@@ -21,7 +21,7 @@ const Statics = () => {
     </div>
   );
 
-  // hna return jsx dyal stat cards
+  // hna return jsx dyal static cards
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       <StatCard
@@ -35,14 +35,14 @@ const Statics = () => {
         title="Total Males"
         count={totalMales}
         icon={FaMars}
-        bgColor="bg-blue-200"
+        bgColor="bg-gray-200"
         iconColor="text-blue-600"
       />
       <StatCard
         title="Total Females"
         count={totalFemales}
         icon={FaVenus}
-        bgColor="bg-pink-200"
+        bgColor="bg-gray-200"
         iconColor="text-pink-600"
       />
     </div>
