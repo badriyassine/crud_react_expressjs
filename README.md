@@ -4,6 +4,12 @@ CRUD web application built with React, Express.js, and MongoDB, implementing ful
 
 ---
 
+## 📷 Screenshot
+
+![products](/screenshot/Screenshot%202026-01-30%20124838.png)
+
+---
+
 ## 🌟 Features
 
 - CRUD operations (Create, Read, Update, Delete)

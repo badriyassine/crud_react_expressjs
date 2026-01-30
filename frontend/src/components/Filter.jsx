@@ -6,7 +6,7 @@ const Filter = ({ onAddClick, searchTerm, setSearchTerm, genderFilter, setGender
       {/* Search bar */}
       <input
         type="search"
-        placeholder="Search..."
+        placeholder="Search by Name, Family Name ,Reg Number or Course..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         className="border rounded-md p-2 flex-1"
