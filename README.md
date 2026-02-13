@@ -46,13 +46,19 @@ run this commands `npm install`, then `npm start`.
 ---
 ## ⚙️ Technologies Used
 
+`front-end:`
 - react.js
 - Redux Toolkit
 - axios
 - tailwindcss
+
+`back-end:`
 - Node.js
 - Express.js  
 - MongoDB
+- mongoose
+
+`Development Tools:`
 - nodemon
 
 ---
